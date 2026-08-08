@@ -33,22 +33,28 @@ public class Main {
                 case 1:
                     System.out.println("Course selected : BCA");
                     Course_Fee = 35000;
+                    System.out.println("Course Fee : " + Course_Fee);
+
                     break;
                 case 2:
                     System.out.println("Course selected : BSC");
                     Course_Fee = 30000;
+                    System.out.println("Course Fee : " + Course_Fee);
                     break;
                 case 3:
                     System.out.println("Course selected : B.E/B.TECH");
                     Course_Fee = 50000;
+                    System.out.println("Course Fee : " + Course_Fee);
                     break;
                 case 4:
                     System.out.println("Course selected : MCA");
                     Course_Fee = 45000;
+                    System.out.println("Course Fee : " + Course_Fee);
                     break;
                 case 5:
                     System.out.println("Course selected : OTHER");
                     Course_Fee = 25000;
+                    System.out.println("Course Fee : " + Course_Fee);
                     break;
             }
             if (Student_Course < 1 || Student_Course > 5) {
@@ -74,6 +80,7 @@ public class Main {
         do {
             System.out.println("Enter Java Marks: ");
             Java_Marks = sc.nextInt();
+            sc.nextLine();
             if (Java_Marks < 0 || Java_Marks > 100) {
                 System.out.println("Invalid Marks! Marks must be between 0 and 100.");
             }
@@ -115,10 +122,10 @@ public class Main {
             }
         } while (Com_Marks < 0 || Com_Marks > 100);
         int total_marks = Java_Marks + Sql_Marks + Web_Marks + Appti_Marks + Com_Marks;
-        double percentage = total_marks / 5;
+        double percentage = total_marks / 5.0;
         System.out.println("Total Marks : " + total_marks);
         System.out.println("Percentage : " + percentage);
-        if (percentage > 85) {
+        if (percentage >= 85) {
             System.out.println("Grade : A+");
         } else if (percentage >= 75 && percentage < 84.99) {
             System.out.println("Grade : A");
@@ -128,8 +135,6 @@ public class Main {
             System.out.println("Grade: C");
         } else if (percentage >= 40 && percentage < 49.99) {
             System.out.println("Grade: D");
-        } else {
-            System.out.println("Grade: F");
         }
         if (Java_Marks >= 35 && Sql_Marks >= 35 && Web_Marks >= 35 && Appti_Marks >= 35 && Com_Marks >= 35) {
             System.out.println("Acadamic Result: PASS");
@@ -155,11 +160,8 @@ public class Main {
         String Attendance_status = (Attendance_Percentage >= 75) ? "Regular" : "Shortage";
         System.out.println("Attendance Status : " + Attendance_status);
         
-        System.out.println("-------------------ASSSIGMENT SUMMARY-------------------");
+        System.out.println("-------------------ASSIGNMENT SUMMARY-------------------");
         
         sc.close();
-
-
     }
-
 }
