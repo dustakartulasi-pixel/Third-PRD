@@ -3,9 +3,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
-        System.out.println("Enter Student ID: ");
-        String Student_Id = sc.nextLine();
+        int choice;
+
+        do {
+            System.out.println("Enter Student ID: ");
+            String Student_Id = sc.nextLine();
         System.out.println("Enter Student Full Name: ");
         String Student_Name = sc.nextLine();
 
@@ -301,10 +303,19 @@ public class Main {
             }
         }
         System.out.println("========================================================");
-        
 
+        do {
+            System.out.println("Do you want to process another student? (1 for Yes, 0 for No): ");
+            choice = sc.nextInt();
+            sc.nextLine();
+            if (choice != 0 && choice != 1) {
+                System.out.println("Invalid choice! Please enter 1 for Yes or 0 for No.");
+            }
+        } while (choice != 0 && choice != 1);
 
+        } while (choice == 1);
+
+        System.out.println("Thank you! Program exited.");
         sc.close();
     }
 }
-
