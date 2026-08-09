@@ -1,0 +1,58 @@
+========================================================
+                 STUDENT SEMESTER REPORT
+========================================================
+Student ID                 : 104
+Student Name               : Mokshith
+Age                        : 23
+Email                      : mokshth@gmail.com
+Course                     : OTHER
+Semester                   : 4
+Career Goal                : Own Business
+
+---------------- ACADEMIC SUMMARY --------------------
+Java Marks                 : 67
+SQL Marks                  : 8
+Web Technology Marks       : 67
+Aptitude Marks              : 45
+Communication Marks        : 88
+Total Marks                : 275/500
+Percentage                 : 55.0%
+Academic Result            : FAILED
+Grade                      : C
+
+---------------- ATTENDANCE SUMMARY ------------------
+Classes Conducted          : 100
+Classes Attended           : 79
+Attendance Percentage      : 79.0%
+Attendance Status          : REGULAR
+
+---------------- ASSIGNMENT SUMMARY ------------------
+Valid Assignments          : 6
+Assignment Total           : 47
+Assignment Average         : 7.833333333333333
+Assignment Status          : SATISFACTORY
+
+---------------- FEE SUMMARY -------------------------
+Base Semester Fee          : ?25000
+Scholarship Percentage     : 0%
+Scholarship Amount         : ?0.0
+Final Payable Fee          : ?25000.0
+Amount Paid                : ?20000.0
+Fee Balance                : ?5000.0
+Fee Status                 : PENDING
+
+---------------- FINAL STATUS ------------------------
+Semester Clearance         : NOT CLEARED FOR NEXT SEMESTER
+
+---------------- FAILED CONDITIONS -------------------
+- Academic performance requirement not met (Academic Result: FAILED)
+- Fee payment incomplete (Fee Status: PENDING)
+
+---------------- RECOMMENDATIONS ---------------------
+- Re-appear for failed subject examinations.
+- Clear the pending fee balance of ?5000.0.
+========================================================
+Do you want to process another student? (1 for Yes, 0 for No):
+1
+Enter Student ID:
+
