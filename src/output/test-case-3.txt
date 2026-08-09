@@ -1,0 +1,55 @@
+========================================================
+                 STUDENT SEMESTER REPORT
+========================================================
+Student ID                 : 103
+Student Name               : Sumanth C
+Age                        : 28
+Email                      : suman@gmail.com
+Course                     : BCA
+Semester                   : 4
+Career Goal                : Upskill MERN
+
+---------------- ACADEMIC SUMMARY --------------------
+Java Marks                 : 90
+SQL Marks                  : 92
+Web Technology Marks       : 93
+Aptitude Marks              : 91
+Communication Marks        : 90
+Total Marks                : 456/500
+Percentage                 : 91.2%
+Academic Result            : PASSED
+Grade                      : A+
+
+---------------- ATTENDANCE SUMMARY ------------------
+Classes Conducted          : 100
+Classes Attended           : 83
+Attendance Percentage      : 83.0%
+Attendance Status          : REGULAR
+
+---------------- ASSIGNMENT SUMMARY ------------------
+Valid Assignments          : 4
+Assignment Total           : 33
+Assignment Average         : 8.25
+Assignment Status          : GOOD
+
+---------------- FEE SUMMARY -------------------------
+Base Semester Fee          : ?35000
+Scholarship Percentage     : 5%
+Scholarship Amount         : ?1750.0
+Final Payable Fee          : ?33250.0
+Amount Paid                : ?33250.0
+Fee Balance                : ?0.0
+Fee Status                 : PAID
+
+---------------- FINAL STATUS ------------------------
+Semester Clearance         : CLEARED FOR NEXT SEMESTER
+
+---------------- FAILED CONDITIONS -------------------
+None
+
+---------------- RECOMMENDATIONS ---------------------
+Maintain the current performance in the next semester.
+========================================================
+Do you want to process another student? (1 for Yes, 0 for No):
+0
+Thank you! Program exited.
