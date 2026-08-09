@@ -1,0 +1,57 @@
+========================================================
+                 STUDENT SEMESTER REPORT
+========================================================
+Student ID                 : 102
+Student Name               : Sonu D
+Age                        : 26
+Email                      : sonu@gmail.com
+Course                     : B.E/B.Tech
+Semester                   : 8
+Career Goal                : Crack 20LPA
+
+---------------- ACADEMIC SUMMARY --------------------
+Java Marks                 : 77
+SQL Marks                  : 98
+Web Technology Marks       : 89
+Aptitude Marks              : 78
+Communication Marks        : 82
+Total Marks                : 424/500
+Percentage                 : 84.8%
+Academic Result            : PASSED
+Grade                      : A
+
+---------------- ATTENDANCE SUMMARY ------------------
+Classes Conducted          : 100
+Classes Attended           : 89
+Attendance Percentage      : 89.0%
+Attendance Status          : REGULAR
+
+---------------- ASSIGNMENT SUMMARY ------------------
+Valid Assignments          : 7
+Assignment Total           : 59
+Assignment Average         : 8.428571428571429
+Assignment Status          : SATISFACTORY
+
+---------------- FEE SUMMARY -------------------------
+Base Semester Fee          : ?50000
+Scholarship Percentage     : 5%
+Scholarship Amount         : ?2500.0
+Final Payable Fee          : ?47500.0
+Amount Paid                : ?40000.0
+Fee Balance                : ?7500.0
+Fee Status                 : PENDING
+
+---------------- FINAL STATUS ------------------------
+Semester Clearance         : NOT CLEARED FOR NEXT SEMESTER
+
+---------------- FAILED CONDITIONS -------------------
+- Fee payment incomplete (Fee Status: PENDING)
+
+---------------- RECOMMENDATIONS ---------------------
+- Clear the pending fee balance of ?7500.0.
+========================================================
+Do you want to process another student? (1 for Yes, 0 for No):
+1
+Enter Student ID: 
+
+
