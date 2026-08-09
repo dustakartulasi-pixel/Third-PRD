@@ -185,6 +185,7 @@ public class Main {
         double Attendance_Percentage = (total_class > 0) ? ((double) Class_attendance / total_class * 100) : 0.00;
         String Attendance_status = (Attendance_Percentage >= 75) ? "REGULAR" : "SHORTAGE";
         String assignmentStatus = (assignmentAverage >= 7.0) ? "SATISFACTORY" : "NEEDS IMPROVEMENT";
+        
 
         System.out.println("\n                        STUDENT SEMESTER REPORT");
         System.out.println("==================================================================");
