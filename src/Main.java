@@ -188,37 +188,36 @@ public class Main {
 
         System.out.println("\n                        STUDENT SEMESTER REPORT");
         System.out.println("==================================================================");
-        System.out.printf("%-23s : %s\n", "Student ID", Student_Id);
-        System.out.printf("%-23s : %s\n", "Student Name", Student_Name);
-        System.out.printf("%-23s : %d\n", "Age", Student_Age);
-        System.out.printf("%-23s : %s\n", "Email", Student_Email);
-        System.out.printf("%-23s : %s\n", "Course", courseName);
-        System.out.printf("%-23s : %s\n", "Semester", Student_Semister);
-        System.out.printf("%-23s : %s\n", "Career Goal", Career_Goal);
+        System.out.println("Student ID             : " + Student_Id);
+        System.out.println("Student Name           : " + Student_Name);
+        System.out.println("Age                    : " + Student_Age);
+        System.out.println("Email                  : " + Student_Email);
+        System.out.println("Course                 : " + courseName);
+        System.out.println("Semester               : " + Student_Semister);
+        System.out.println("Career Goal            : " + Career_Goal);
 
         System.out.println("\n------------------ ACADEMIC SUMMARY -------------------");
-        System.out.printf("%-23s : %d\n", "Java Marks", Java_Marks);
-        System.out.printf("%-23s : %d\n", "SQL Marks", Sql_Marks);
-        System.out.printf("%-23s : %d\n", "Web Technology Marks", Web_Marks);
-        System.out.printf("%-23s : %d\n", "Aptitude Marks", Appti_Marks);
-        System.out.printf("%-23s : %d\n", "Communication Marks", Com_Marks);
-        System.out.printf("%-23s : %d/500\n", "Total Marks", total_marks);
-        System.out.printf("%-23s : %.2f%%\n", "Percentage", percentage);
-        System.out.printf("%-23s : %s\n", "Academic Result", academicResult);
-        System.out.printf("%-23s : %s\n", "Grade", grade);
+        System.out.println("Java Marks             : " + Java_Marks);
+        System.out.println("SQL Marks              : " + Sql_Marks);
+        System.out.println("Web Technology Marks   : " + Web_Marks);
+        System.out.println("Aptitude Marks         : " + Appti_Marks);
+        System.out.println("Communication Marks    : " + Com_Marks);
+        System.out.println("Total Marks            : " + total_marks + "/500");
+        System.out.println("Percentage             : " + percentage + "%");
+        System.out.println("Academic Result        : " + academicResult);
+        System.out.println("Grade                  : " + grade);
 
         System.out.println("\n------------------ ATTENDANCE SUMMARY -------------------");
-        System.out.printf("%-23s : %d\n", "Classes Conducted", total_class);
-        System.out.printf("%-23s : %d\n", "Classes Attended", Class_attendance);
-        System.out.printf("%-23s : %.2f%%\n", "Attendance Percentage", Attendance_Percentage);
-        System.out.printf("%-23s : %s\n", "Attendance Status", Attendance_status);
+        System.out.println("Classes Conducted      : " + total_class);
+        System.out.println("Classes Attended       : " + Class_attendance);
+        System.out.println("Attendance Percentage  : " + Attendance_Percentage + "%");
+        System.out.println("Attendance Status      : " + Attendance_status);
 
         System.out.println("\n------------------ ASSIGNMENT SUMMARY -------------------");
-        System.out.printf("%-23s : %d\n", "Valid Assignments", validAssignmentCount);
-        String formattedTotal = (assignmentTotal % 1 == 0) ? String.format("%.0f", assignmentTotal) : String.format("%.2f", assignmentTotal);
-        System.out.printf("%-23s : %s\n", "Assignment Total", formattedTotal);
-        System.out.printf("%-23s : %.2f\n", "Assignment Average", assignmentAverage);
-        System.out.printf("%-23s : %s\n", "Assignment Status", assignmentStatus);
+        System.out.println("Valid Assignments      : " + validAssignmentCount);
+        System.out.println("Assignment Total       : " + assignmentTotal);
+        System.out.println("Assignment Average     : " + assignmentAverage);
+        System.out.println("Assignment Status      : " + assignmentStatus);
 
         sc.close();
     }
