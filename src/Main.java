@@ -186,39 +186,123 @@ public class Main {
         String Attendance_status = (Attendance_Percentage >= 75) ? "REGULAR" : "SHORTAGE";
         String assignmentStatus = (assignmentAverage >= 7.0) ? "SATISFACTORY" : "NEEDS IMPROVEMENT";
         
+        int scholarshipPercentage = 0;
+        if (academicResult == "PASSED" && percentage >= 85 && Attendance_Percentage >= 85) {
+            scholarshipPercentage = 10;
+        } else if (academicResult == "PASSED" && percentage >= 75 && Attendance_Percentage >= 75) {
+            scholarshipPercentage = 5;
+        } else {
+            scholarshipPercentage = 0;
+        }
 
-        System.out.println("\n                        STUDENT SEMESTER REPORT");
-        System.out.println("==================================================================");
-        System.out.println("Student ID             : " + Student_Id);
-        System.out.println("Student Name           : " + Student_Name);
-        System.out.println("Age                    : " + Student_Age);
-        System.out.println("Email                  : " + Student_Email);
-        System.out.println("Course                 : " + courseName);
-        System.out.println("Semester               : " + Student_Semister);
-        System.out.println("Career Goal            : " + Career_Goal);
+        double scholarshipAmount = (Course_Fee * scholarshipPercentage) / 100.0;
+        double finalPayableFee = Course_Fee - scholarshipAmount;
 
-        System.out.println("\n------------------ ACADEMIC SUMMARY -------------------");
-        System.out.println("Java Marks             : " + Java_Marks);
-        System.out.println("SQL Marks              : " + Sql_Marks);
-        System.out.println("Web Technology Marks   : " + Web_Marks);
-        System.out.println("Aptitude Marks         : " + Appti_Marks);
-        System.out.println("Communication Marks    : " + Com_Marks);
-        System.out.println("Total Marks            : " + total_marks + "/500");
-        System.out.println("Percentage             : " + percentage + "%");
-        System.out.println("Academic Result        : " + academicResult);
-        System.out.println("Grade                  : " + grade);
+        double amountPaid;
+        do {
+            System.out.println("Enter Amount Paid: ");
+            amountPaid = sc.nextDouble();
+            sc.nextLine();
+            if (amountPaid < 0 || amountPaid > finalPayableFee) {
+                System.out.println("Invalid Amount! Amount paid must be between 0 and " + finalPayableFee + ".");
+            }
+        } while (amountPaid < 0 || amountPaid > finalPayableFee);
 
-        System.out.println("\n------------------ ATTENDANCE SUMMARY -------------------");
-        System.out.println("Classes Conducted      : " + total_class);
-        System.out.println("Classes Attended       : " + Class_attendance);
-        System.out.println("Attendance Percentage  : " + Attendance_Percentage + "%");
-        System.out.println("Attendance Status      : " + Attendance_status);
+        double feeBalance = finalPayableFee - amountPaid;
+        String feeStatus = (feeBalance == 0) ? "PAID" : "PENDING";
 
-        System.out.println("\n------------------ ASSIGNMENT SUMMARY -------------------");
-        System.out.println("Valid Assignments      : " + validAssignmentCount);
-        System.out.println("Assignment Total       : " + assignmentTotal);
-        System.out.println("Assignment Average     : " + assignmentAverage);
-        System.out.println("Assignment Status      : " + assignmentStatus);
+        boolean academicCleared = academicResult.equals("PASSED");
+        boolean attendanceCleared = Attendance_status.equals("REGULAR");
+        boolean assignmentCleared = assignmentStatus.equals("SATISFACTORY");
+        boolean feeCleared = feeStatus.equals("PAID");
+
+        boolean isCleared = academicCleared && attendanceCleared && assignmentCleared && feeCleared;
+        String semesterClearance = isCleared ? "CLEARED FOR NEXT SEMESTER" : "NOT CLEARED FOR NEXT SEMESTER";
+
+        System.out.println("========================================================");
+        System.out.println("                 STUDENT SEMESTER REPORT");
+        System.out.println("========================================================");
+        System.out.println("Student ID                 : " + Student_Id);
+        System.out.println("Student Name               : " + Student_Name);
+        System.out.println("Age                        : " + Student_Age);
+        System.out.println("Email                      : " + Student_Email);
+        System.out.println("Course                     : " + courseName);
+        System.out.println("Semester                   : " + Student_Semister);
+        System.out.println("Career Goal                : " + Career_Goal);
+
+        System.out.println("\n---------------- ACADEMIC SUMMARY --------------------");
+        System.out.println("Java Marks                 : " + Java_Marks);
+        System.out.println("SQL Marks                  : " + Sql_Marks);
+        System.out.println("Web Technology Marks       : " + Web_Marks);
+        System.out.println("Aptitude Marks              : " + Appti_Marks);
+        System.out.println("Communication Marks        : " + Com_Marks);
+        System.out.println("Total Marks                : " + total_marks + "/500");
+        System.out.println("Percentage                 : " + percentage + "%");
+        System.out.println("Academic Result            : " + academicResult);
+        System.out.println("Grade                      : " + grade);
+
+        System.out.println("\n---------------- ATTENDANCE SUMMARY ------------------");
+        System.out.println("Classes Conducted          : " + total_class);
+        System.out.println("Classes Attended           : " + Class_attendance);
+        System.out.println("Attendance Percentage      : " + Attendance_Percentage + "%");
+        System.out.println("Attendance Status          : " + Attendance_status);
+
+        System.out.println("\n---------------- ASSIGNMENT SUMMARY ------------------");
+        System.out.println("Valid Assignments          : " + validAssignmentCount);
+        System.out.println("Assignment Total           : " + (int) assignmentTotal);
+        System.out.println("Assignment Average         : " + assignmentAverage);
+        System.out.println("Assignment Status          : " + assignmentStatus);
+
+        System.out.println("\n---------------- FEE SUMMARY -------------------------");
+        System.out.println("Base Semester Fee          : ₹" + Course_Fee);
+        System.out.println("Scholarship Percentage     : " + scholarshipPercentage + "%");
+        System.out.println("Scholarship Amount         : ₹" + scholarshipAmount);
+        System.out.println("Final Payable Fee          : ₹" + finalPayableFee);
+        System.out.println("Amount Paid                : ₹" + amountPaid);
+        System.out.println("Fee Balance                : ₹" + feeBalance);
+        System.out.println("Fee Status                 : " + feeStatus);
+
+        System.out.println("\n---------------- FINAL STATUS ------------------------");
+        System.out.println("Semester Clearance         : " + semesterClearance);
+
+        System.out.println("\n---------------- FAILED CONDITIONS -------------------");
+        if (isCleared) {
+            System.out.println("None");
+        } else {
+            if (!academicCleared) {
+                System.out.println("- Academic performance requirement not met (Academic Result: FAILED)");
+            }
+            if (!attendanceCleared) {
+                System.out.println("- Attendance requirement not met (Attendance Status: SHORTAGE)");
+            }
+            if (!assignmentCleared) {
+                System.out.println("- Assignment performance requirement not met (Assignment Status: NEEDS IMPROVEMENT)");
+            }
+            if (!feeCleared) {
+                System.out.println("- Fee payment incomplete (Fee Status: PENDING)");
+            }
+        }
+
+        System.out.println("\n---------------- RECOMMENDATIONS ---------------------");
+        if (isCleared) {
+            System.out.println("Maintain the current performance in the next semester.");
+        } else {
+            if (!academicCleared) {
+                System.out.println("- Re-appear for failed subject examinations.");
+            }
+            if (!attendanceCleared) {
+                System.out.println("- Attend makeup classes to reach minimum 75% attendance.");
+            }
+            if (!assignmentCleared) {
+                System.out.println("- Improve assignment scores to achieve average score >= 7.0.");
+            }
+            if (!feeCleared) {
+                System.out.println("- Clear the pending fee balance of ₹" + feeBalance + ".");
+            }
+        }
+        System.out.println("========================================================");
+        
+
 
         sc.close();
     }
